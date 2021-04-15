@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+box-sizing: border-box;
+}
+html{
+  font-size: 10px;
+  font-family: 'Montserrat', sans-serif;
+}
+a {
+  text-decoration: none;
+  }
+  .container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  p {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+  }
+  .title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+  }
+  .name h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+  }
+  /* Header  */
+  #header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  #header .header {
+    min-height: 50px;
+    background-color: #3cb371;
+    opacity: 0.7;
+  }
+ 
+
+  #header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+  }
+
+ /* end Header*/
+  /* top section */
+  #top{
+    background-color:cornsilk;
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+  }
+  #top::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:cornsilk;
+    z-index: -1;
+  }
+  #top .top{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  #top h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color:transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+  }
+  #top h1:nth-child(1){
+    animation-delay: 1s;
+  }
+  #top h1:nth-child(2){
+    animation-delay: 2s;
+  }
+  #top h1:nth-child(3){
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3s;
+  }
+  #top .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color:#3cb371;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property:
+    background-color;
+  }
+  #top .cta:hover {
+    color: #3cb371;
+    background-color: black;
+  }
+  /* end top section */
+  /* Keyframes */
+@keyframes  text_reveal_box{
+  50%{
+    width: 100%;
+    left: 0;
+  }
+  100%{
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes text_reveal{
+  100%{
+    color: #3cb371;
+  }
+}
+@keyframes text_reveal_name{
+  100%{
+    color:black;
+  }
+}
+/* Keyframes */
+/* project section*/
+#project .project {
+  flex-direction: column;
+  text-align: center;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+#project .project-top{
+  max-width: 500px;
+  margin: 0 auto;
+}
+#project .project-bottom{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+#project .project-item{
+  flex-basis: 80%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: cornsilk;
+  background-size: cover;
+  margin: 10px 5%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+#project .project ::after{
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-image: ;
+  opacity: 20%;
+  z-index: -1;
+}
+#project .project-bottom .icon{
+  height: 5px;
+  width: 5px;
+  margin-bottom: 100px;
+}
+#project .project-item h2{
+  font-size: 2rem;
+  color:#3cb371;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+#project  .project-item p{
+  color:black;
+  text-align: left;
+}
+ .title span {
+  color:#3cb371;
+} 
+/* end project section */
+#footer{
+  background-color: #3cb371;
+}
+#footer .footer{
+  min-height: 30px;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#footer h1{
+  color: white;
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: .1rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#footer p{
+  font-size: 1.4rem;
+  color: white;
+}
+/*  end footer */
+
+/* Media Query  for tablet */
+@media only screen and (min-width: 768px){
+  .cta{
+    font-size: 2.5rem;
+    padding :20px 60px;
+  }
+  h1.section-title{
+    font-size: 6rem;
+  }
+  #top h1{
+    font-size : 7rem;
+  }
+  #project .project-bottom .project-item{
+    flex-basis: 45%;
+    margin: 2.5%;
+  }
+}
+/* end Media Query  for tablet */
+
+/* for laptop */
+@media only screen and (min-width: 1200px) {
+  #project .project-bottom .project-item{
+    flex-basis: 22%;
+    margin: 1.5%;
+  }
+}
+  /* end for laptop */
